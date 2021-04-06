@@ -1,35 +1,32 @@
-
 class Bank {
-    constructor() { 
-        
+    constructor() {
+        this._deposit = []
+        this._withdraw = []
+        this.balance = 0;
     }
 
-    deposit(credit, date){ // not sure how to get around the date being greyed out
-        let creditBalance = 0;
-        creditBalance += credit;
-        console.log(creditBalance)
-        return creditBalance;
+    get Deposit(){
+        return `${this._deposit[0]} || ${this._deposit[1]} || || ${this._deposit[2]}`;
+    }
+
+    get Withdraw(){
+        return `${this._withdraw[0]} || || ${this._withdraw[1]} || ${this._withdraw[2]}`;
+    }
+
+    deposit(credit, date){
+        this.balance += credit;
+        this._deposit.push(date, credit, this.balance);
+        return this._deposit;
     }
 
     withdraw(debit, date){
-        let debitBalance = 0;
-        debitBalance -= debit;
-        console.log(debitBalance)
-        return debitBalance;
+        this.balance -= debit;
+        this._withdraw.push(date, debit, this.balance)
+        return this._withdraw;
     }
-    getBalance(){
-        // let account = new Bank // not sure how i'm supposed to add debit and credit
-        let totalBalance = 
-        console.log(totalBalance)
-        return totalBalance; 
-    }
-} // dear reviewer, please let me know how to improve this thank u
+} 
 
 module.exports = Bank
 
-let bank = new Bank()
 
-bank.deposit(1000, '10/01/2012')
-bank.deposit(2000, '13/01/2012')
-bank.withdraw(500, '14/01/2012')
-bank.getBalance()
+
