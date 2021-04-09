@@ -1,32 +1,20 @@
+const Transaction = require('./transaction.js')
+const Statement = require('./statement.js')
+
 class Bank {
-    constructor() {
-        this._deposit = []
-        this._withdraw = []
-        this.balance = 0;
+    constructor(transaction = new Transaction(), statement = new Statement()) {
+        this.transaction = transaction;
+        this.statement = statement;
     }
-
-    get Deposit(){
-        return `${this._deposit[0]} || ${this._deposit[1]} || || ${this._deposit[2]}`;
+    deposit(credit, date) {
+        return this.transaction.deposit(credit, date);
     }
-
-    get Withdraw(){
-        return `${this._withdraw[0]} || || ${this._withdraw[1]} || ${this._withdraw[2]}`;
+    withdraw(debit, date) {
+        return this.transaction.withdraw(debit, date);
     }
-
-    deposit(credit, date){
-        this.balance += credit;
-        this._deposit.push(date, credit, this.balance);
-        return this._deposit;
+    print() {
+        return this.statement.format(this.transaction.statement);
     }
-
-    withdraw(debit, date){
-        this.balance -= debit;
-        this._withdraw.push(date, debit, this.balance)
-        return this._withdraw;
-    }
-} 
+}
 
 module.exports = Bank
-
-
-
