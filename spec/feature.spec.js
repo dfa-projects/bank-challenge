@@ -1,7 +1,7 @@
 const Bank = require('../src/bank.js')
 
 describe('feature test', function() {
-    let bank
+    let bank;
     it('satisfies acceptance criteria', function() {
 
         bank = new Bank()
