@@ -1,0 +1,24 @@
+{
+  "name": "bank-challenge",
+  "version": "1.0.0",
+  "description": "bank-challenge",
+  "main": "index.js",
+  "dependencies": {},
+  "devDependencies": {
+    "eslint": "^7.24.0",
+    "jasmine": "^3.7.0"
+  },
+  "scripts": {
+    "test": "jasmine"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hanna-98/bank-challenge.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/hanna-98/bank-challenge/issues"
+  },
+  "homepage": "https://github.com/hanna-98/bank-challenge#readme"
+}
