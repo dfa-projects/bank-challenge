@@ -4,9 +4,9 @@ class Transaction {
         this.statement = []
     }
     deposit(credit, date){
-        this.balance += credit;
-        this.statement.unshift([`${date} `, ` ${credit.toFixed(2)} `, ' ' , ` ${this.balance.toFixed(2)}\n`]);
-        return this.balance;
+            this.balance += credit;
+            this.statement.unshift([`${date} `, ` ${credit.toFixed(2)} `, ' ' , ` ${this.balance.toFixed(2)}\n`]);
+            return this.balance;
     }
     withdraw(debit, date){
         this.balance -= debit;

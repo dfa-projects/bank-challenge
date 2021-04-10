@@ -18,3 +18,10 @@ class Bank {
 }
 
 module.exports = Bank
+
+let bank = new Bank()
+bank.withdraw(70, '2020/11/13')
+bank.deposit(500, '2020/10/24')
+
+let example = bank.print()
+console.log(example)

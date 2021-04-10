@@ -5,7 +5,8 @@ class Statement {
     format(array) {
         let str = array.join('');
         str = str.replace(/,/g, "||");
-        return `${this.header}\n${str}`
+        return `${this.header}\n${str}`;
+        
     }
 }
 
