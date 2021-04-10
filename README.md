@@ -20,16 +20,20 @@ Then use the print function to print your statements:
 ```javascript
 bank.print()
 ```
-Then when you run node bank.js in terminal your output should look like this:
+Then when you run node bank.js in terminal youu should see this:
 
-## Important
-Please make sure your inputs are of the correct data type: dates are strings and credit and debit are numbers.
-Also make sure you make your deposits/withdrawals in order of date, from oldest to newest, as this program assumes you are making transactions sequentially in real time and prints the most recent statements first. For example: 
+![screenshot](images/bank-image1.png)
+
+### Important
+1. Make sure your inputs are of the correct data type: dates are strings and credit and debit are numbers.
+2. Make your deposits/withdrawals in order of date, from oldest to newest, as this program assumes you are making transactions sequentially in real time and prints the most recent statements first. For example: 
 ```javascript
 bank.withdraw(70, '2020/11/13')
 bank.deposit(500, '2020/10/24')
 ```
 Will give the output below as it assumes the deposit was made after the withdrawal.
+
+![screenshot](images/bank-image2.png)
 
 ## Domain Model
 
@@ -43,11 +47,11 @@ Will give the output below as it assumes the deposit was made after the withdraw
 | Statement | format(array) | array @arr | formats array to string | string |
 
 ## Acceptance Criteria
-Given a client makes a deposit of 1000 on 10-01-2012
-And a deposit of 2000 on 13-01-2012
-And a withdrawal of 500 on 14-01-2012
-When she prints her bank statement
-Then she would see
+Given a client makes a deposit of 1000 on 10-01-2012  
+And a deposit of 2000 on 13-01-2012  
+And a withdrawal of 500 on 14-01-2012  
+When she prints her bank statement  
+Then she would see  
 ```
 date || credit || debit || balance
 14/01/2012 || || 500.00 || 2500.00
